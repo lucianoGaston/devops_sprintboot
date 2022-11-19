@@ -4,10 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,8 +45,18 @@ public class DemoControlador extends SpringBootServletInitializer {
 
         return "Se  han  Registrado los productos ";
     }
+
+    @PostMapping("/newProducto")
+    public String addProducto(@RequestBody ProductosLimpieza newProducto) {
+
+
+        list_product.add(newProducto);
+    return  "Producto Registrado";
+
+    }
+
         @GetMapping("/listado_productos")
-        public Iterable<ProductosLimpieza> obtenerProductos() {
-            return (Iterable<ProductosLimpieza>) list_product.listIterator();
+        public List<ProductosLimpieza> obtenerProductos() {
+            return  list_product;
         }
 }
