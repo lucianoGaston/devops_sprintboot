@@ -57,6 +57,30 @@ public class DemoControlador extends SpringBootServletInitializer {
 
         @GetMapping("/listado_productos")
         public List<ProductosLimpieza> obtenerProductos() {
-            return  list_product;
+
+            ProductosLimpieza producto1 = new ProductosLimpieza();
+            ProductosLimpieza producto2 = new ProductosLimpieza();
+            ProductosLimpieza producto3 = new ProductosLimpieza();
+
+            producto1.setId_producto(1);
+            producto1.setPrecio(140);
+            producto1.setDescripcion("Arroz");
+            producto1.setStock(5);
+
+            producto2.setId_producto(2);
+            producto2.setPrecio(240);
+            producto2.setDescripcion("Fideo Moñito");
+            producto2.setStock(10);
+
+            producto3.setId_producto(3);
+            producto3.setPrecio(350);
+            producto3.setDescripcion("atun");
+            producto3.setStock(50);
+
+            list_product.add(producto1);
+            list_product.add(producto2);
+            list_product.add(producto3);
+
+        return  list_product;
         }
 }
