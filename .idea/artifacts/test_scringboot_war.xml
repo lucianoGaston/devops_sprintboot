@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="test_scringboot:war">
+    <output-path>$PROJECT_DIR$/test_scringboot/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>test_scringboot</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="test_scringboot-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="test_scringboot:war exploded" />
+    </root>
+  </artifact>
+</component>
