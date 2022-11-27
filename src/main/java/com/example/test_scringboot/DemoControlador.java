@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 @SpringBootApplication
 @RestController
+@RequestMapping("/articulos")
 public class DemoControlador extends SpringBootServletInitializer {
     public static void main(String[] args) {    SpringApplication.run(DemoControlador.class, args);}
     @Override
