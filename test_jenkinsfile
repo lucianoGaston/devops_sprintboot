@@ -18,3 +18,11 @@ pipeline {
         } 
     } 
 }
+post
+    {
+     always{
+        deleteDir()
+        echo "False Always"
+     }
+
+}
