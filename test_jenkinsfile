@@ -1,0 +1,19 @@
+pipeline { 
+    agent any    
+    stages { 
+        stage('Construir') {  
+            steps { 
+                bat echo "Aqui se Construye"  
+            } 
+        } 
+        stage('Probar') {  
+            steps { 
+               bat echo "Aqui se hacen test"
+            } 
+        } 
+        stage('Desplegar') {  
+            steps { 
+                bat echo "Aqui se despliega"  
+            } 
+        } 
+    } 
