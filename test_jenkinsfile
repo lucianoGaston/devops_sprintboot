@@ -3,17 +3,17 @@ pipeline {
     stages { 
         stage('Construir') {  
             steps { 
-                bat echo "Aqui se Construye"  
+                echo "Aqui se Construye"  
             } 
         } 
         stage('Probar') {  
             steps { 
-               bat echo "Aqui se hacen test"
+                echo "Aqui se hacen test"
             } 
         } 
         stage('Desplegar') {  
             steps { 
-                bat echo "Aqui se despliega"  
+                 echo "Aqui se despliega"  
             } 
         } 
     } 
